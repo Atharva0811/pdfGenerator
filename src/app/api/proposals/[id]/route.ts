@@ -2,12 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import Proposal from "../../../../../model/Proposal";
 import connectDB from "../../../../../lib/mongoConnect";
 
-export async function GET(
-  _req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+interface Params {
+  params: { id: string };
+}
+
+export async function GET(_req: NextRequest, { params }: Params) {
   await connectDB();
-  const { id } =  params;
+  const { id } = params;
   const data = await Proposal.findById(id);
 
   if (!data) {
@@ -40,7 +41,6 @@ export async function PUT(
     const { id } = await params;
     const body = await req.json();
     const updatedProposal = await Proposal.findByIdAndUpdate(id, body);
-
 
     return NextResponse.json({
       message: "Proposal updated successfully",
