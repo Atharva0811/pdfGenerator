@@ -1,9 +1,10 @@
+"use client"
 import AddForm from '../components/others/AddForm'
 import ProposalList from '../components/others/ProposalList'
 import { getAllProposals } from '../server/actions'
 import React from 'react'
 import { Toaster } from 'react-hot-toast'
-async function page() {
+async function Home() {
   const proposalsList = await getAllProposals()
   return (
     <div className='max-w-7xl mx-auto '>
@@ -14,4 +15,4 @@ async function page() {
   )
 }
 
-export default page
+export default Home
