@@ -26,7 +26,7 @@ type PdfPage11Props = {
 const PdfPage11 = React.forwardRef<HTMLDivElement, PdfPage11Props>(
     ({ formInputs }, ref) => {
         return <div ref={ref} className="h-[1700px] relative text-xl text-neutral-900">
-            <div className="absolute top-6 right-6">{(formInputs.proposalType === "AdGenX" || formInputs.proposalType === "PropGenX" || formInputs.proposalType === "HealthGenX") ? 10 : 11}</div>
+            <div className="absolute top-6 right-6">{(formInputs?.proposalType === "AdGenX" || formInputs?.proposalType === "PropGenX" || formInputs?.proposalType === "HealthGenX") ? 10 : 11}</div>
             <div className="h-full px-10">
                 <div className="h-full border-s ps-12">
                     <div className="pt-10">
@@ -34,11 +34,11 @@ const PdfPage11 = React.forwardRef<HTMLDivElement, PdfPage11Props>(
                     </div>
                     <div className="relative mt-10 mb-20">
                         <div className="absolute top-2 -left-12 h-36 w-3 bg-gradient-to-br from-green-500 to-blue-400"></div>
-                        <p className="text-3xl">{formInputs.proposalType === "AdGenX" ? "Initiating growth journey" : "Timeline"}</p>
+                        <p className="text-3xl">{formInputs?.proposalType === "AdGenX" ? "Initiating growth journey" : "Timeline"}</p>
                         <p className="text-7xl font-black">Plan of Action</p>
                     </div>
                     {
-                        formInputs.proposalType !== "AdGenX" ? <>
+                        formInputs?.proposalType !== "AdGenX" ? <>
                             <div className="mb-20">
                                 The project timeline hinges on a thorough understanding of the customer's domain, Google Ads account, and competitors, making the timely receipt of the AI Ads Setup crucial. If this info is not received on schedule, all subsequent steps will be delayed. Additionally, timely payment for Google Ads is essential; any delay in this payment will also push back the project timeline.
                             </div>
