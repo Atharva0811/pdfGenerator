@@ -2,11 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Proposal from "../../../../../model/Proposal";
 import connectDB from "../../../../../lib/mongoConnect";
 
-interface Params {
-  params: { id: string };
-}
-
-export async function GET(_req: NextRequest, { params }: Params) {
+export async function GET(_req: NextRequest, { params }: any) {
   await connectDB();
   const { id } = params;
   const data = await Proposal.findById(id);
