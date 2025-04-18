@@ -4,7 +4,7 @@ import connectDB from "../../../../../lib/mongoConnect";
 
 export async function GET(_req: NextRequest, { params }: any) {
   await connectDB();
-  const { id } = params;
+  const { id } = await params;
   const data = await Proposal.findById(id);
 
   if (!data) {
@@ -14,10 +14,7 @@ export async function GET(_req: NextRequest, { params }: any) {
   return NextResponse.json(data);
 }
 
-export async function DELETE(
-  _req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function DELETE(_req: NextRequest, { params }: any) {
   await connectDB();
   const { id } = await params;
   const data = await Proposal.findByIdAndDelete(id);
@@ -28,10 +25,7 @@ export async function DELETE(
 
   return NextResponse.json({ message: "Proposal deleted successfully" });
 }
-export async function PUT(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function PUT(req: NextRequest, { params }: any) {
   try {
     await connectDB();
     const { id } = await params;
