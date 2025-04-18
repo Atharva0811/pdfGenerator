@@ -37,11 +37,11 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                         </p>
                         {formInputs?.proposalType === "AdGenX" ? (
                             <p className="text-6xl font-black">
-                                Contextual Ad copies generation & campaign setup for {formInputs.companyName} in {formInputs.audiencePersona}  by using AI-Portal
+                                Contextual Ad copies generation & campaign setup for {formInputs?.companyName} in {formInputs?.audiencePersona}  by using AI-Portal
                             </p>
                         ) : (
                             <p className="text-6xl font-black">
-                                Help {formInputs.companyName} in <br />
+                                Help {formInputs?.companyName} in <br />
                                 improving the ROI on Google Ads <br />
                                 by using AI-Portal
                             </p>
@@ -100,7 +100,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Target : <span className="capitalize"> {formInputs.audiencePersona} </span></p>
+                                        <p>Target : <span className="capitalize"> {formInputs?.audiencePersona} </span></p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -124,7 +124,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Products to be marketed : <span className="capitalize"> {formInputs.products} </span></p>
+                                        <p>Products to be marketed : <span className="capitalize"> {formInputs?.products} </span></p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -147,7 +147,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Location : <span className="capitalize">{formInputs.location} </span> </p>
+                                        <p>Location : <span className="capitalize">{formInputs?.location} </span> </p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -173,7 +173,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Website : <span className=""> {formInputs.website} </span></p>
+                                        <p>Website : <span className=""> {formInputs?.website} </span></p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -203,7 +203,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Status of Google Ads : <span className="capitalize"> {formInputs.googleAdsStatus} </span></p>
+                                        <p>Status of Google Ads : <span className="capitalize"> {formInputs?.googleAdsStatus} </span></p>
                                     </div>
                                 </div>
                             </div> : formInputs?.proposalType === "AdGenX" ? <div className="mb-16 grid gap-2">
@@ -219,7 +219,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Website : <span className=""> {formInputs.website} </span></p>
+                                        <p>Website : <span className=""> {formInputs?.website} </span></p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -231,7 +231,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Location : <span className="capitalize">{formInputs.location} </span></p>
+                                        <p>Location : <span className="capitalize">{formInputs?.location} </span></p>
                                     </div>
                                 </div>
 
@@ -245,7 +245,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Product / Service to be marketed : <span className="capitalize"> {formInputs.products} </span>
+                                        <p>Product / Service to be marketed : <span className="capitalize"> {formInputs?.products} </span>
                                         </p>
                                     </div>
                                 </div>
@@ -266,7 +266,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         </svg>
                                     </div>
                                     <div>
-                                        <p>Status of Google Ads : <span className="capitalize"> {formInputs.googleAdsStatus} </span></p>
+                                        <p>Status of Google Ads : <span className="capitalize"> {formInputs?.googleAdsStatus} </span></p>
                                     </div>
                                 </div>
                             </div> : ""
