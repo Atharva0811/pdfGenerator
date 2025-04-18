@@ -52,20 +52,19 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                     </div>
                     <div className="mb-16 ">
                         {(() => {
-                            const { spocName, companyName, proposalType } = formInputs;
-                            let message: string | null = `${spocName} from ${companyName} had a discussion with Inaiways Team to understand how it can help them boost their sales conversion through AI-powered Google Ads.`;
+                            let message: string | null = `${formInputs?.spocName} from ${formInputs?.companyName} had a discussion with Inaiways Team to understand how it can help them boost their sales conversion through AI-powered Google Ads.`;
 
-                            switch (proposalType) {
+                            switch (formInputs?.proposalType) {
                                 case "AdGenX":
-                                    message += ` Understanding how AI-Portal can improve the click-through-rate (CTR) and lower the Ad spend requirements by attracting lower cost-per-click (CPC), the ${companyName} requested for a competitive proposal.`;
+                                    message += ` Understanding how AI-Portal can improve the click-through-rate (CTR) and lower the Ad spend requirements by attracting lower cost-per-click (CPC), the ${formInputs?.companyName} requested for a competitive proposal.`;
                                     break;
                                 case "LeadGenX":
-                                    message += ` Understanding how AI-Portal can improve the ROI & ROAS, the ${companyName} requested for a competitive proposal.`;
+                                    message += ` Understanding how AI-Portal can improve the ROI & ROAS, the ${formInputs?.companyName} requested for a competitive proposal.`;
                                     break;
                                 case "PropGenX":
                                 case "HealthGenX":
                                 case "LeadTitanX":
-                                    message += ` During the discussion, Inaiways showcased its AI-powered product called AI-Portal, that generates highly qualified sales leads by automating  entire execution of Google Ads which includes keyword research, ad group creation, Ad copy writing, landing page generation, and campaign setup & execution. Understanding how AI-Portal can improve the ROI & ROAS, the ${companyName} requested for a competitive proposal.`;
+                                    message += ` During the discussion, Inaiways showcased its AI-powered product called AI-Portal, that generates highly qualified sales leads by automating  entire execution of Google Ads which includes keyword research, ad group creation, Ad copy writing, landing page generation, and campaign setup & execution. Understanding how AI-Portal can improve the ROI & ROAS, the ${formInputs?.companyName} requested for a competitive proposal.`;
                                     break;
                                 default:
                                     message = null;
