@@ -2,25 +2,25 @@
 
 import { useStore } from "../../store/store";
 import { useRef, useState } from "react";
-import PdfPage1 from "../../pages/PdfPage1";
-import PdfPage2 from "../../pages/PdfPage2";
-import PdfPage15 from "../../pages/PdfPage15";
+import PdfPage1 from "../../componentPage/PdfPage1";
+import PdfPage2 from "../../componentPage/PdfPage2";
+import PdfPage15 from "../../componentPage/PdfPage15";
 import { addProposal } from "../../server/actions";
 import toast from "react-hot-toast";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-import PdfPage14 from "../../pages/PdfPage14";
-import PdfPage13 from "../../pages/PdfPage13";
-import PdfPage12 from "../../pages/PdfPage12";
-import PdfPage11 from "../../pages/PdfPage11";
-import PdfPage10 from "../../pages/Pdfpage10";
-import PdfPage9 from "../../pages/PdfPage9";
-import PdfPage8 from "../../pages/PdfPage8";
-import PdfPage7 from "../../pages/PdfPage7";
-import PdfPage6 from "../../pages/PdfPage6";
-import PdfPage5 from "../../pages/PdfPage5";
-import PdfPage4 from "../../pages/PdfPage4";
-import PdfPage3 from "../../pages/PdfPage3";
+import PdfPage14 from "../../componentPage/PdfPage14";
+import PdfPage13 from "../../componentPage/PdfPage13";
+import PdfPage12 from "../../componentPage/PdfPage12";
+import PdfPage11 from "../../componentPage/PdfPage11";
+import PdfPage10 from "../../componentPage/Pdfpage10";
+import PdfPage9 from "../../componentPage/PdfPage9";
+import PdfPage8 from "../../componentPage/PdfPage8";
+import PdfPage7 from "../../componentPage/PdfPage7";
+import PdfPage6 from "../../componentPage/PdfPage6";
+import PdfPage5 from "../../componentPage/PdfPage5";
+import PdfPage4 from "../../componentPage/PdfPage4";
+import PdfPage3 from "../../componentPage/PdfPage3";
 
 const PreviewPDF = ({ reset }: { reset: () => void }) => {
     const { setPreviewModal, formInputs, setProposalsList, setIsFromTable, proposalsList, isFromTable } = useStore()

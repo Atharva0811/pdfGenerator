@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/PdfPage13.tsx", "src/pages/PdfPage12.tsx"  ],
+, "src/componentPage/PdfPage13.tsx", "src/componentPage/PdfPage12.tsx"  ],
   "exclude": [
     "node_modules"
   ]
