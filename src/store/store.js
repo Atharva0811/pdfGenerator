@@ -3,7 +3,18 @@ import { create } from 'zustand';
 
 export const useStore = create((set) => ({
     proposalsList: [],
-    formInputs: {},
+    formInputs: {
+        proposalType:"",
+        companyName:"",
+        spocName:"",
+        audiencePersona:"",
+        website:"",
+        googleAdsStatus:"",
+        products:"",
+        location:"",
+        proposalDate:"",
+        validityDate:""
+    },
     setFormInputs: (data) => set(() => ({
         formInputs: data
     })),
