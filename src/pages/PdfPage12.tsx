@@ -9,7 +9,7 @@ type PdfPage12Props = {
 const PdfPage12 = React.forwardRef<HTMLDivElement, PdfPage12Props>(({ formInputs }, ref) => {
     return <div ref={ref} className="h-[1700px] relative bg-[#272521] text-lg text-white">
         <div className="absolute top-6 right-6">
-            {["AdGenX", "PropGenX", "HealthGenX"].includes(formInputs.proposalType) ? 11 : 12}
+            {["AdGenX", "PropGenX", "HealthGenX"].includes(formInputs?.proposalType) ? 11 : 12}
         </div>
 
         <div className="h-full ps-10 pe-48">
