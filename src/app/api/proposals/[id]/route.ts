@@ -7,7 +7,7 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   await connectDB();
-  const { id } = await params;
+  const { id } =  params;
   const data = await Proposal.findById(id);
 
   if (!data) {
