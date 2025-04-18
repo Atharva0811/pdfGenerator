@@ -24,7 +24,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
     return (
         <div ref={ref} className="h-[1700px] relative text-xl text-neutral-900">
             <div className="absolute top-6 right-6">
-                {["PropGenX", "HealthGenX"].includes(formInputs.proposalType) ? 7 : 8}
+                {["PropGenX", "HealthGenX"].includes(formInputs?.proposalType) ? 7 : 8}
             </div>
             <div className="h-full px-10">
                 <div className="h-full border-s ps-12">
@@ -33,7 +33,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                     </div>
                     <div className="relative mt-10 mb-16">
                         <div className="absolute top-2 -left-12 h-52 w-3 bg-gradient-to-br from-green-500 to-blue-400"></div>
-                        <p className="text-3xl ">{formInputs.proposalType === "LeadGenX" ? "Value Creation" : "Scope Of Work"}</p>
+                        <p className="text-3xl ">{formInputs?.proposalType === "LeadGenX" ? "Value Creation" : "Scope Of Work"}</p>
                         <p className="text-7xl font-black">
                             Analysing Performance of <br /> AI-Portal
                         </p>
@@ -58,7 +58,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                         <div className="border-eborder-gray-400 col-span-4 grid h-20 place-content-center border-y border-e border-gray-400 text-lg font-semibold uppercase">
                             <p>After AI-Portal</p>
                         </div>
-                        {formInputs.proposalType !== "AdGenX" && <>
+                        {formInputs?.proposalType !== "AdGenX" && <>
                             <div className="col-span-1 grid place-content-center border-s border-b border-gray-400 p-4 pb-8 uppercase">
                                 <p className="font-bold">1</p>
                             </div>
@@ -158,7 +158,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                                 </div>
                             </div> </>}
                         <div className="col-span-1 grid place-content-center border-s border-b border-gray-400 p-4 pb-8 uppercase">
-                            <p className="font-bold">{formInputs.proposalType === "AdGenX" ? 1 : 3}</p>
+                            <p className="font-bold">{formInputs?.proposalType === "AdGenX" ? 1 : 3}</p>
                         </div>
 
                         <div className="col-span-3 grid items-center border-s border-b border-gray-400 bg-cyan-50 p-4 pb-8  ">
@@ -179,7 +179,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                                     </div>
                                 </div>
                                 {
-                                    formInputs.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
+                                    formInputs?.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
                                         <span id="idghz9" className="mt-5  text-neutral-900">
                                             <Bullet />
                                         </span>
@@ -210,7 +210,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                                     </div>
                                 </div>
                                 {
-                                    formInputs.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
+                                    formInputs?.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
                                         <span id="idghz9" className="mt-5  text-neutral-900">
                                             <Bullet />
                                         </span>
@@ -231,7 +231,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                             </div>
                         </div>
                         <div className="col-span-1 grid place-content-center border-s border-b border-gray-400 p-4 pb-8 uppercase">
-                            <p className="font-bold">{formInputs.proposalType === "AdGenX" ? 2 : 4}</p>
+                            <p className="font-bold">{formInputs?.proposalType === "AdGenX" ? 2 : 4}</p>
                         </div>
                         <div className="col-span-3 grid items-center border-s border-b border-gray-400 bg-cyan-50 p-4 pb-8  ">
                             <div>
@@ -251,7 +251,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                                     </div>
                                 </div>
                                 {
-                                    formInputs.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
+                                    formInputs?.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
                                         <span id="idghz9" className="mt-5  text-neutral-900">
                                             <Bullet />
                                         </span>
@@ -274,7 +274,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                                     </div>
                                 </div>
                                 {
-                                    formInputs.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
+                                    formInputs?.proposalType !== "AdGenX" && <div id="i0mbks" className="flex gap-3">
                                         <span id="idghz9" className="mt-5  text-neutral-900">
                                             <Bullet />
                                         </span>
@@ -287,7 +287,7 @@ const PdfPage8 = forwardRef<HTMLDivElement, PdfPage8Props>(({ formInputs }, ref)
                             </div>
                         </div>
                         <div className="col-span-1 grid place-content-center border-s border-b border-gray-400 p-4 pb-8 uppercase">
-                            <p className="font-bold">{formInputs.proposalType === "AdGenX" ? 3 : 5}</p>
+                            <p className="font-bold">{formInputs?.proposalType === "AdGenX" ? 3 : 5}</p>
                         </div>
                         <div className="col-span-3 grid items-center border-s border-b border-gray-400 bg-cyan-50 p-4 pb-8  ">
                             <div>

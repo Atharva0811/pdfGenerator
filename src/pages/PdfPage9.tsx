@@ -10,7 +10,7 @@ const PdfPage9 = React.forwardRef<HTMLDivElement, PdfPage9Props>(
     ({ formInputs }, ref) => {
         return <div ref={ref} className="h-[1700px] relative bg-[#272521] text-xl text-white">
             <div className="absolute top-6 right-6">
-                {["PropGenX", "HealthGenX"].includes(formInputs.proposalType) ? 8 : 9}
+                {["PropGenX", "HealthGenX"].includes(formInputs?.proposalType) ? 8 : 9}
             </div>
 
             <div className="h-full ps-10 pe-60">

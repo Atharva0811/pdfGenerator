@@ -54,7 +54,7 @@ const PdfPage2 = React.forwardRef<any, PdfPage2Props>(({ formInputs }, ref) => {
 
           <div className="my-16">
             <div className="mt-2 mb-12 text-8xl font-black">
-              {["LeadGenX", "AdGenX"].includes(formInputs.proposalType) ? "Index" : "Agenda"}
+              {["LeadGenX", "AdGenX"].includes(formInputs?.proposalType) ? "Index" : "Agenda"}
             </div>
 
             <div className="mt-36 max-w-4xl">
@@ -78,7 +78,7 @@ const PdfPage2 = React.forwardRef<any, PdfPage2Props>(({ formInputs }, ref) => {
               <div>
                 <div className="mt-7 mb-10 flex justify-between items-center">
                   <p className="text-4xl">Deliverables</p>
-                  <p className="text-2xl">{deliverablesPage[formInputs.proposalType]}</p>
+                  <p className="text-2xl">{deliverablesPage[formInputs?.proposalType]}</p>
                 </div>
                 <div className="h-1 bg-gradient-to-br from-green-500 to-blue-400"></div>
               </div>
@@ -86,7 +86,7 @@ const PdfPage2 = React.forwardRef<any, PdfPage2Props>(({ formInputs }, ref) => {
               <div>
                 <div className="mt-7 mb-10 flex justify-between items-center">
                   <p className="text-4xl">Execution Plan</p>
-                  <p className="text-2xl">{executionPlanPage[formInputs.proposalType]}</p>
+                  <p className="text-2xl">{executionPlanPage[formInputs?.proposalType]}</p>
                 </div>
                 <div className="h-1 bg-gradient-to-br from-green-500 to-blue-400"></div>
               </div>
@@ -94,16 +94,16 @@ const PdfPage2 = React.forwardRef<any, PdfPage2Props>(({ formInputs }, ref) => {
               <div>
                 <div className="mt-7 mb-10 flex justify-between items-center">
                   <p className="text-4xl">Terms & Conditions</p>
-                  <p className="text-2xl">{termsPage[formInputs.proposalType]}</p>
+                  <p className="text-2xl">{termsPage[formInputs?.proposalType]}</p>
                 </div>
                 <div className="h-1 bg-gradient-to-br from-green-500 to-blue-400"></div>
               </div>
 
-              {["LeadGenX", "LeadTitanX", "PropGenX", "HealthGenX"].includes(formInputs.proposalType) && (
+              {["LeadGenX", "LeadTitanX", "PropGenX", "HealthGenX"].includes(formInputs?.proposalType) && (
                 <div>
                   <div className="mt-7 mb-10 flex justify-between items-center">
                     <p className="text-4xl">Escalation Matrix</p>
-                    <p className="text-2xl">{escalationPage[formInputs.proposalType]}</p>
+                    <p className="text-2xl">{escalationPage[formInputs?.proposalType]}</p>
                   </div>
                   <div className="h-1 bg-gradient-to-br from-green-500 to-blue-400"></div>
                 </div>

@@ -21,7 +21,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
         LeadGenX: "For the above requirement, Inaiways will undertake the following activities :",
         AdGenX: "For the above requirement, Inaiways will undertake the following activities :",
     };
-    const proposalTypeText = proposalTypeMapping[formInputs.proposalType];
+    const proposalTypeText = proposalTypeMapping[formInputs?.proposalType];
     return (
         <div ref={ref} className="h-[1700px] relative text-xl text-neutral-900">
             <div className="absolute top-6 right-6">3</div>
@@ -33,9 +33,9 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                     <div className="relative mt-10 mb-16">
                         <div className="absolute top-4 -left-11 h-72 w-3 bg-gradient-to-br from-green-500 to-blue-400"></div>
                         <p className="text-3xl ">
-                            {(formInputs.proposalType === "LeadGenX" || formInputs.proposalType === "AdGenX") ? "Business Requirement" : "Scope Of Work"}
+                            {(formInputs?.proposalType === "LeadGenX" || formInputs?.proposalType === "AdGenX") ? "Business Requirement" : "Scope Of Work"}
                         </p>
-                        {formInputs.proposalType === "AdGenX" ? (
+                        {formInputs?.proposalType === "AdGenX" ? (
                             <p className="text-6xl font-black">
                                 Contextual Ad copies generation & campaign setup for {formInputs.companyName} in {formInputs.audiencePersona}  by using AI-Portal
                             </p>
@@ -74,7 +74,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                         })()}
                     </div>
                     {
-                        formInputs.proposalType === "LeadGenX" ?
+                        formInputs?.proposalType === "LeadGenX" ?
                             <div className="mb-16 grid gap-2">
                                 <div className="flex items-center gap-4">
                                     <div>
@@ -206,7 +206,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                                         <p>Status of Google Ads : <span className="capitalize"> {formInputs.googleAdsStatus} </span></p>
                                     </div>
                                 </div>
-                            </div> : formInputs.proposalType === "AdGenX" ? <div className="mb-16 grid gap-2">
+                            </div> : formInputs?.proposalType === "AdGenX" ? <div className="mb-16 grid gap-2">
                                 <div className="flex items-center gap-4">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="40" height="40" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
@@ -272,7 +272,7 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                             </div> : ""
                     }
 
-                    {(formInputs.proposalType === "LeadGenX" || formInputs.proposalType === "AdGenX") ? "" :
+                    {(formInputs?.proposalType === "LeadGenX" || formInputs?.proposalType === "AdGenX") ? "" :
                         <div className="text-3xl font-bold text-blue-600">
                             Coverage Of Proposal
                         </div>
@@ -289,16 +289,16 @@ const PdfPage3 = React.forwardRef<HTMLDivElement, PdfPage3Props>(({ formInputs }
                         <p>4. Creation of multiple Ad groups</p>
                         <p>5. Creation of multiple Ad copies in each Ad group</p>
                         {
-                            formInputs.proposalType !== "AdGenX" && (
+                            formInputs?.proposalType !== "AdGenX" && (
                                 <p>6. Creation of contextual landing pages for each Ad group</p>
                             )
                         }
-                        <p>{formInputs.proposalType === "AdGenX" ? 6 : 7}. Setup of Ad campaigns</p>
+                        <p>{formInputs?.proposalType === "AdGenX" ? 6 : 7}. Setup of Ad campaigns</p>
                     </div>
                 </div>
             </div>
             {
-                formInputs.proposalType === "AdGenX" && <div className="absolute bottom-0 left-0 w-full h-auto">
+                formInputs?.proposalType === "AdGenX" && <div className="absolute bottom-0 left-0 w-full h-auto">
                     <img className="w-full h-full" src={Img.src} />
                 </div>
             }

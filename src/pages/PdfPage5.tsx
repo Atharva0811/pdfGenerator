@@ -34,16 +34,16 @@ const PdfPage5 = React.forwardRef<HTMLDivElement, PdfPage5Props>(({ formInputs }
                         <p className="text-3xl">
                             AI-Powered Lead Generation Plans
                         </p>
-                        <p className="text-7xl font-black">Optional {formInputs.proposalType === "LeadTitanX" ? "Investment" : "Charges"}</p>
+                        <p className="text-7xl font-black">Optional {formInputs?.proposalType === "LeadTitanX" ? "Investment" : "Charges"}</p>
                     </div>
                     {
-                        formInputs.proposalType !== "LeadTitanX" && <div className="mb-16 text-3xl font-medium text-blue-600">
+                        formInputs?.proposalType !== "LeadTitanX" && <div className="mb-16 text-3xl font-medium text-blue-600">
                             Charges for availing additional services
                         </div>
                     }
 
                     {
-                        (formInputs.proposalType === "LeadGenX" || formInputs.proposalType === "AdGenX") &&
+                        (formInputs?.proposalType === "LeadGenX" || formInputs?.proposalType === "AdGenX") &&
                         <div className="grid grid-cols-12">
                             <div className="col-span-1 grid h-20 place-content-center border-y border-s border-gray-400 text-lg font-semibold">
                                 <p>
@@ -58,7 +58,7 @@ const PdfPage5 = React.forwardRef<HTMLDivElement, PdfPage5Props>(({ formInputs }
                                 <p>
                                     ESSENTIALS <br />
                                     <span className="font-normal capitalize">{
-                                        formInputs.proposalType === "LeadGenX" && "(without taxes)"
+                                        formInputs?.proposalType === "LeadGenX" && "(without taxes)"
                                     }</span>
                                 </p>
                             </div>
@@ -66,7 +66,7 @@ const PdfPage5 = React.forwardRef<HTMLDivElement, PdfPage5Props>(({ formInputs }
                                 <p>
                                     BUSINESS-PRO <br />
                                     <span className="font-normal capitalize">{
-                                        formInputs.proposalType === "LeadGenX" && "(without taxes)"
+                                        formInputs?.proposalType === "LeadGenX" && "(without taxes)"
                                     }</span>
                                 </p>
                             </div>
@@ -77,7 +77,7 @@ const PdfPage5 = React.forwardRef<HTMLDivElement, PdfPage5Props>(({ formInputs }
 
                             <div className="col-span-5 grid items-center border-s border-b border-gray-400 bg-cyan-50 p-4 pb-8 ">
                                 <div>
-                                    <p className="text-xl font-bold">{formInputs.proposalType === "AdGenX" ? "AI Optimization" : "AI - Market Realignment"}</p>
+                                    <p className="text-xl font-bold">{formInputs?.proposalType === "AdGenX" ? "AI Optimization" : "AI - Market Realignment"}</p>
                                     <div className="mt-2 grid gap-2">
                                         <div id="i0mbks" className="flex gap-3">
                                             <span id="idghz9" className="mt-5 text-neutral-900">
@@ -131,7 +131,7 @@ const PdfPage5 = React.forwardRef<HTMLDivElement, PdfPage5Props>(({ formInputs }
 
                                             </span>
                                             <div id="i8id6r" className="">
-                                                All features of {formInputs.proposalType === "LeadGenX" ? "AI - Market Realignment" : "AI Optimization"}
+                                                All features of {formInputs?.proposalType === "LeadGenX" ? "AI - Market Realignment" : "AI Optimization"}
                                             </div>
                                         </div>
                                         <div id="i0mbks" className="flex gap-3">
@@ -179,7 +179,7 @@ const PdfPage5 = React.forwardRef<HTMLDivElement, PdfPage5Props>(({ formInputs }
                         </div>
                     }
                     {
-                        formInputs.proposalType === "LeadTitanX" && <div className="grid grid-cols-12">
+                        formInputs?.proposalType === "LeadTitanX" && <div className="grid grid-cols-12">
                             <div className="col-span-2 grid h-20 place-content-center border-y border-s border-gray-400 text-lg font-semibold">
                                 <p>
                                     SR.

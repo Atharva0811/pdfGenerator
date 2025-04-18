@@ -28,7 +28,7 @@ type PdfPage13Props = {
 const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs }, ref) => {
     return <div ref={ref} className="h-[1700px] relative text-xl text-neutral-900">
         <div className="absolute top-6 right-6">
-            {["AdGenX", "PropGenX", "HealthGenX"].includes(formInputs.proposalType) ? 12 : 13}
+            {["AdGenX", "PropGenX", "HealthGenX"].includes(formInputs?.proposalType) ? 12 : 13}
         </div>
         <div className="h-full px-10">
             <div className="h-full border-s px-10">
@@ -96,14 +96,14 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                     <div className="flex gap-3">
                         <Bullet />
                         <div>
-                            Validity of {formInputs.proposalType === "AdGenX" ? "AI Optimisation" : "AI - Market Realignment"} & expert support is for 90
+                            Validity of {formInputs?.proposalType === "AdGenX" ? "AI Optimisation" : "AI - Market Realignment"} & expert support is for 90
                             consecutive days starting from date of payment for that support.
                         </div>
                     </div>
                 </div>
                 <div className="mt-10 grid gap-1">
                     <p className="text-xl font-bold">Delivery Terms :</p>
-                    {formInputs.proposalType === "LeadGenX" &&
+                    {formInputs?.proposalType === "LeadGenX" &&
                         [
                             "In case, the Ad campaign setup is not done properly and the customer wants to update the Ad campaign setup (before starting the Ads), only one (1) FREE change request will be considered.",
                             "Refer to https://www.inaiways.com/v/terms-conditions-leadgenx-with-lp for more details."
@@ -114,7 +114,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                             </div>
                         ))}
 
-                    {formInputs.proposalType === "AdGenX" && (
+                    {formInputs?.proposalType === "AdGenX" && (
                         <div className="flex gap-3">
                             <Bullet />
                             <div>
@@ -123,7 +123,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     )}
 
-                    {(formInputs.proposalType === "PropGenX" || formInputs.proposalType === "HealthGenX") &&
+                    {(formInputs?.proposalType === "PropGenX" || formInputs?.proposalType === "HealthGenX") &&
                         [
                             "The customer must share in the writing the details required for setting up the Ad campaign (keywords, good keywords, bad keywords, or any other required information).",
                             "For more details refer to https://www.inaiways.com/v/terms-conditions-direct-promoters."
@@ -134,7 +134,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                             </div>
                         ))}
 
-                    {formInputs.proposalType === "LeadTitanX" &&
+                    {formInputs?.proposalType === "LeadTitanX" &&
                         [
                             "The quality and relevance of the generated ad copies are directly dependent on the keyword Input and persona choices given by customers. Inaiways is not responsible for the outcome of the campaigns or any discrepancies arising from inaccurate, incomplete, or insufficient input details required to set up the Ad campaign.",
                             "Refer to https://www.inaiways.com/v/terms-conditions-enterprises for more details."
@@ -157,7 +157,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     </div>
 
-                    {formInputs.proposalType === "LeadGenX" && (
+                    {formInputs?.proposalType === "LeadGenX" && (
                         <div className="flex gap-3">
                             <Bullet />
                             <div>
@@ -169,7 +169,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     )}
 
-                    {formInputs.proposalType === "AdGenX" && (
+                    {formInputs?.proposalType === "AdGenX" && (
                         <div className="flex gap-3">
                             <Bullet />
                             <div>
@@ -180,7 +180,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     )}
 
-                    {formInputs.proposalType === "LeadTitanX" && (
+                    {formInputs?.proposalType === "LeadTitanX" && (
                         <div className="flex gap-3">
                             <Bullet />
                             <div>
@@ -192,7 +192,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     )}
 
-                    {(formInputs.proposalType === "PropGenX" || formInputs.proposalType === "HealthGenX") && (
+                    {(formInputs?.proposalType === "PropGenX" || formInputs?.proposalType === "HealthGenX") && (
                         <div className="flex gap-3">
                             <Bullet />
                             <div>
@@ -214,7 +214,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     </div>
 
-                    {formInputs.proposalType && (
+                    {formInputs?.proposalType && (
                         <div className="flex gap-3">
                             <Bullet />
                             <div>
@@ -260,12 +260,12 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                                             for more details.
                                         </span>
                                     ),
-                                }[formInputs.proposalType] || ""}
+                                }[formInputs?.proposalType] || ""}
                             </div>
                         </div>
                     )}
 
-                    {(formInputs.proposalType === "HealthGenX" || formInputs.proposalType === "PropGenX") && (
+                    {(formInputs?.proposalType === "HealthGenX" || formInputs?.proposalType === "PropGenX") && (
                         <>
                             <div className="flex gap-3">
                                 <Bullet />
@@ -293,7 +293,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                         </div>
                     </div>
 
-                    {formInputs.proposalType !== "LeadTitanX" && (
+                    {formInputs?.proposalType !== "LeadTitanX" && (
                         (() => {
                             const proposalLinks = {
                                 LeadGenX: "https://www.inaiways.com/v/terms-conditions-leadgenx-with-lp",
@@ -302,7 +302,7 @@ const PdfPage13 = React.forwardRef<HTMLDivElement, PdfPage13Props>(({ formInputs
                                 HealthGenX: "https://www.inaiways.com/v/terms-conditions-direct-promoters",
                             };
 
-                            const url = proposalLinks[formInputs.proposalType];
+                            const url = proposalLinks[formInputs?.proposalType];
 
                             return url ? (
                                 <div className="flex gap-3">

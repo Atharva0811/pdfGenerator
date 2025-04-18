@@ -21,7 +21,7 @@ const Bullet = () => {
 const PdfPage10 = React.forwardRef<HTMLDivElement, PdfPage10Props>(
     ({ formInputs }, ref) => {
         return <div ref={ref} className="relative h-[1700px] text-xl text-neutral-900">
-            <div className="absolute top-6 right-6"> {(formInputs.proposalType === "PropGenX" || formInputs.proposalType === "HealthGenX") ? 9 : 10} </div>
+            <div className="absolute top-6 right-6"> {(formInputs?.proposalType === "PropGenX" || formInputs?.proposalType === "HealthGenX") ? 9 : 10} </div>
             <div className="h-full ps-10 pe-48">
                 <div className="h-full border-s ps-12">
                     <div className="pt-10">
@@ -94,7 +94,7 @@ const PdfPage10 = React.forwardRef<HTMLDivElement, PdfPage10Props>(
                             </div>
                         </div>
                         {
-                            formInputs.proposalType === "LeadGenX" && <div className="flex gap-6">
+                            formInputs?.proposalType === "LeadGenX" && <div className="flex gap-6">
                                 <div className="-mt-3 text-5xl font-black text-blue-500">4</div>
                                 <div className="">
                                     <p className="mb-2 text-3xl font-bold ">
