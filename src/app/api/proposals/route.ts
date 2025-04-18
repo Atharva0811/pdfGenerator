@@ -22,6 +22,7 @@ export async function POST(req:NextRequest) {
     await connectDB();
     const body = await req.json();
     const newProposal = new Proposal(body);
+    console.log(body);
     await newProposal.save();
     return NextResponse.json(newProposal, { status: 201 });
   } catch (error: any) {
